@@ -34,11 +34,11 @@ export default function Home() {
             </ul>
           </nav>
           <div className="flex flex-col text-center p-10">
-            <h2 className=" text-5xl font-medium py-2 text-cyan-900">
+            <h2 className=" text-5xl font-medium py-4 text-cyan-900">
               Cole Heideman
             </h2>
-            <h3 className="text-2xl py-2">Frontend Web Developer</h3>
-            <p className="text-md leading-8 text-gray-800">
+            <h3 className="text-2xl py-4">Frontend Web Developer</h3>
+            <p className="text-md leading-8 text-gray-800 py-4">
               I'm passionate about creating dynamic and engaging user
               experiences that are functional and intuitive, and I'm constantly
               striving to learn and grow. When I'm not coding you'll find me
@@ -58,6 +58,40 @@ export default function Home() {
             <SiGithub className="cursor-pointer" />
             <SiLinkedin className="cursor-pointer" />
           </div>
+        </section>
+        <section className="flex justify-center gap-16 py-4">
+          <div className="flex flex-col items-center shadow-md p-10">
+            <h3 className="text-xl py-3 text-center">
+              Languages/Frameworks I've used:
+            </h3>
+            <ul className="grid grid-cols-2 gap-x-6 gap-2">
+              <li>Javascript</li>
+              <li>Typescript</li>
+              <li>React</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Tailwind</li>
+              <li>SASS</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+          <div className="flex flex-col items-center shadow-md p-10">
+            <h3 className="text-xl py-3 items-center text-center">
+              Technology I've used:
+            </h3>
+            <div>
+              <ul className="grid grid-cols-2 gap-x-6 gap-2">
+                <li>Git</li>
+                <li>Linux CLI</li>
+                <li>VS Code</li>
+                <li>VMBox</li>
+                <li>Wordpress</li>
+                <li>Firebase</li>
+                <li>Vercel</li>
+              </ul>
+            </div>
+          </div>
+          <div></div>
         </section>
       </main>
     </div>
