@@ -4,6 +4,7 @@ import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { Figtree } from 'next/font/google';
 import Image from 'next/image';
 import avatar from '../public/ReadyPlayerMe-Avatar.png';
+import Project from '@/components/Project';
 
 //function for google font, allows preload of font
 const figtree = Figtree({ subsets: ['latin'] });
@@ -39,12 +40,11 @@ export default function Home() {
             </h2>
             <h3 className="text-2xl py-4">Frontend Web Developer</h3>
             <p className="text-md leading-8 text-gray-800 py-4">
-              I'm passionate about creating dynamic and engaging user //
-              eslint-disable-next-line react/no-unescaped-entities experiences
-              that are functional and intuitive, and I'm constantly striving to
-              learn and grow. When I'm not coding you'll find me improving my
-              German, playing guitar, or getting better at my current favorite
-              game.
+              I'm passionate about creating dynamic and engaging user
+              experiences that are functional and intuitive, and I'm constantly
+              striving to learn and grow. When I'm not coding you'll find me
+              improving my German, playing guitar, or getting better at my
+              current favorite game.
             </p>
           </div>
 
@@ -94,7 +94,10 @@ export default function Home() {
           </div>
           <div></div>
         </section>
-        <section>Projects:</section>
+        <section>
+          <h3>Projects:</h3>
+          <Project />
+        </section>
       </main>
     </div>
   );
