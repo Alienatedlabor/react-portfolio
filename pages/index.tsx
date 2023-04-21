@@ -95,8 +95,21 @@ export default function Home() {
           <div></div>
         </section>
         <section>
-          <h3>Projects:</h3>
-          <Project />
+          <h3 className="flex justify-center text-cyan-700 text-2xl">
+            Projects:
+          </h3>
+          <Project
+            title="Brewview"
+            description="A React app to conduct online beer tastings with my friends. The primary goal is to have a consensus based way to decide on a beer to taste together, establish vocabulary for rating/tasting, and then to aggregate those ratings. The app is styled with tailwind and the backend and auth is handled through Firebase."
+          />
+          <Project
+            alt="weather app UI showing example weather, a search bar, and a five day forecast"
+            title="Weather App"
+            imageURL="/home/alienatedlabor/repos/react-portfolio/public/weatherApp.png"
+            description="A weather app written in vanilla Javascript, utilizing OpenWeather API. Features include localized weather, results in either Fahrenheit or Celsius, a five-day forecast, and a backround that changes dynamically depending on whether it is day or night in the respective location. "
+            demoLink="https://alienatedlabor.github.io/Weather-App/"
+            githubLink="https://github.com/Alienatedlabor/Weather-App"
+          />
         </section>
       </main>
     </div>
