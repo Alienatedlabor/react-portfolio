@@ -15,9 +15,9 @@ export default function Home() {
         <title>Cole Heideman | Web Developer</title>
       </Head>
 
-      <main className="bg-white px-10">
+      <main className="bg-white">
         <section className="min-h-screen">
-          <nav className="p-5 mb-12 flex justify-between">
+          <nav className="p-5 mb-10 flex justify-between">
             <h1 className="text-xl"></h1>
             <ul className="flex items-center gap-2">
               <li>
@@ -39,11 +39,12 @@ export default function Home() {
             </h2>
             <h3 className="text-2xl py-4">Frontend Web Developer</h3>
             <p className="text-md leading-8 text-gray-800 py-4">
-              I'm passionate about creating dynamic and engaging user
-              experiences that are functional and intuitive, and I'm constantly
-              striving to learn and grow. When I'm not coding you'll find me
-              improving my German, playing guitar, or getting better at my
-              current favorite game.
+              I'm passionate about creating dynamic and engaging user //
+              eslint-disable-next-line react/no-unescaped-entities experiences
+              that are functional and intuitive, and I'm constantly striving to
+              learn and grow. When I'm not coding you'll find me improving my
+              German, playing guitar, or getting better at my current favorite
+              game.
             </p>
           </div>
 
@@ -59,12 +60,12 @@ export default function Home() {
             <SiLinkedin className="cursor-pointer" />
           </div>
         </section>
-        <section className="flex justify-center gap-16 py-4">
-          <div className="flex flex-col items-center shadow-md p-10">
-            <h3 className="text-xl py-3 text-center">
-              Languages/Frameworks I've used:
+        <section className="flex justify-center gap-16 p-8 bg-gradient-to-b from-cyan-900 to-cyan-600">
+          <div className="flex flex-col items-center shadow-md p-10 bg-white rounded-md">
+            <h3 className="text-xl py-3 text-center text-cyan-700">
+              Languages/Frameworks used:
             </h3>
-            <ul className="grid grid-cols-2 gap-x-6 gap-2">
+            <ul className="grid grid-cols-2 gap-x-6 gap-2  text-gray-800">
               <li>Javascript</li>
               <li>Typescript</li>
               <li>React</li>
@@ -75,12 +76,12 @@ export default function Home() {
               <li>Bootstrap</li>
             </ul>
           </div>
-          <div className="flex flex-col items-center shadow-md p-10">
-            <h3 className="text-xl py-3 items-center text-center">
+          <div className="flex flex-col items-center shadow-lg p-10 bg-white rounded-md">
+            <h3 className="text-xl py-3 items-center text-center text-cyan-700">
               Technology I've used:
             </h3>
             <div>
-              <ul className="grid grid-cols-2 gap-x-6 gap-2">
+              <ul className="grid grid-cols-2 gap-x-6 gap-2  text-gray-800">
                 <li>Git</li>
                 <li>Linux CLI</li>
                 <li>VS Code</li>
@@ -93,6 +94,7 @@ export default function Home() {
           </div>
           <div></div>
         </section>
+        <section>Projects:</section>
       </main>
     </div>
   );
