@@ -21,7 +21,7 @@ export default function Project({
     <div className="flex flex-col items-center shadow-md p-10 rounded-md">
       <h1 className="text-lg py-3 text-center text-cyan-700">{title}</h1>
       <img src={imageURL} alt={alt}></img>
-      <p className="flex justify-center align-middle text-center">
+      <p className="flex justify-center align-middle text-center py-4">
         {description}
       </p>
       <div className="flex gap-2">
