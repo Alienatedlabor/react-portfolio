@@ -5,6 +5,11 @@ import { Figtree } from 'next/font/google';
 import Image from 'next/image';
 import avatar from '../public/ReadyPlayerMe-Avatar.png';
 import Project from '@/components/Project';
+import weatherAppImage from '../public/weatherApp.png';
+import ticTacToeImage from '../public/ticTacToeScreenshot.png';
+import etchASketchImage from '../public/etchASketchScreenshot.png';
+import adminDashboardImage from '../public/adminDashboardScreenshot.png';
+import signupFormImage from '../public/signupFormScreenshot.png';
 
 //function for google font, allows preload of font
 const figtree = Figtree({ subsets: ['latin'] });
@@ -101,27 +106,56 @@ export default function Home() {
           <div className="grid grid-cols-3">
             <Project
               title="Brewview"
-              description="A React app to conduct online beer tastings with my friends. The primary goal is to have a consensus based way to decide on a beer to taste together, establish vocabulary for rating/tasting, and then to aggregate those ratings. The app is styled with tailwind and the backend and auth is handled through Firebase."
+              description="A React app to conduct online beer tastings with my friends. The primary goal is to have a consensus based way to decide on a beer to taste together, establish vocabulary for rating/tasting, and then to aggregate those ratings. The app is styled with Tailwind and the backend and auth is handled through Firebase. This is still a work in progress."
               demoLink="https://beerview.vercel.app/"
               githubLink="https://github.com/Alienatedlabor/beerview"
               imageURL=""
               alt=""
             />
+
             <Project
               alt="weather app UI showing example weather, a search bar, and a five day forecast"
               title="Weather App"
-              imageURL="/home/alienatedlabor/repos/react-portfolio/public/weatherApp.png"
+              imageURL={weatherAppImage}
               description="A weather app written in vanilla Javascript, utilizing OpenWeather API. Features include localized weather, results in either Fahrenheit or Celsius, a five-day forecast, and a backround that changes dynamically depending on whether it is day or night in the respective location. "
               demoLink="https://alienatedlabor.github.io/Weather-App/"
               githubLink="https://github.com/Alienatedlabor/Weather-App"
             />
+
             <Project
-              title="Tic-tac-toe"
-              imageURL=""
-              alt=""
-              description="A Tic-tac-toe webapp game built in javascript."
+              title="Etch-a-Sketch"
+              imageURL={etchASketchImage}
+              alt="a 16 by 16 grid of squares with some squares colored randomly and some squares colored black. On the left side are buttons to change the color, clear the grid, change the grid size, or enable a random color mode."
+              description="An etch-a-sketch webapp featuring the ability to change the grid-count, a color picker, a random color mode, and a clear button, written in vanilla javascript."
+              githubLink="https://github.com/Alienatedlabor/Etch-a-Sketch"
+              demoLink="https://alienatedlabor.github.io/Etch-a-Sketch/"
+            />
+
+            <Project
+              title="Tic-Tac-Toe"
+              imageURL={ticTacToeImage}
+              alt="an image of a tic tac toe grid where O won."
+              description="A Tic-tac-toe webapp game for two same-screen players, written in vanilla javascript."
               githubLink="https://github.com/Alienatedlabor/Tic-Tac-Toe"
               demoLink="https://alienatedlabor.github.io/Tic-Tac-Toe/"
+            />
+
+            <Project
+              title="Admin Dashboard"
+              imageURL={adminDashboardImage}
+              alt="an admin dashboard layout"
+              description="A mock admin dashboard I made to practice layouts combining CSS Grid and Flex. The design was built according to a design sheet, and I added a dynamic greeting that changes depending on what time it is."
+              githubLink="https://github.com/Alienatedlabor/Admin-Dashboard"
+              demoLink="https://alienatedlabor.github.io/Admin-Dashboard/"
+            />
+
+            <Project
+              title="Signup Form"
+              imageURL={signupFormImage}
+              alt="a signup form for a fake cryogenics company called Ewig"
+              description="A mock signup form meant to practice HTML form validation and some javascript form validation, as well as CSS positioning. Uses some SASS features for styling."
+              githubLink="https://github.com/Alienatedlabor/Signup-Form"
+              demoLink="https://alienatedlabor.github.io/Signup-Form/"
             />
           </div>
         </section>
@@ -129,3 +163,4 @@ export default function Home() {
     </div>
   );
 }
+// TODO: change the links to open in a new tab/window
