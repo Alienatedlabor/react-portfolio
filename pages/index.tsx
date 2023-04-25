@@ -10,6 +10,7 @@ import ticTacToeImage from '../public/ticTacToeScreenshot.png';
 import etchASketchImage from '../public/etchASketchScreenshot.png';
 import adminDashboardImage from '../public/adminDashboardScreenshot.png';
 import signupFormImage from '../public/signupFormScreenshot.png';
+import { ContactMe } from '@/components/ContactMe';
 
 //function for google font, allows preload of font
 const figtree = Figtree({ subsets: ['latin'] });
@@ -158,6 +159,9 @@ export default function Home() {
               demoLink="https://alienatedlabor.github.io/Signup-Form/"
             />
           </div>
+        </section>
+        <section className="flex justify-center align-middle py-8 bg-gradient-to-b from-cyan-900 to-cyan-600">
+          <ContactMe />
         </section>
       </main>
     </div>
