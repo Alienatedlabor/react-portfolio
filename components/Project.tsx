@@ -44,3 +44,4 @@ export default function Project({
     </div>
   );
 }
+//TODO: make into a column on mobile/small screens
