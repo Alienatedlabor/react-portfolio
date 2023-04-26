@@ -145,7 +145,7 @@ export default function Home() {
               title="Admin Dashboard"
               imageURL={adminDashboardImage}
               alt="an admin dashboard layout"
-              description="A mock admin dashboard I made to practice layouts combining CSS Grid and Flex. The design was built according to a design sheet, and I added a dynamic greeting that changes depending on what time it is."
+              description="A mock admin dashboard I made to practice layouts combining CSS Grid and Flex. The design layout was built according to a design sheet, and I added a dynamic greeting that changes depending on what time it is."
               githubLink="https://github.com/Alienatedlabor/Admin-Dashboard"
               demoLink="https://alienatedlabor.github.io/Admin-Dashboard/"
             />
@@ -160,7 +160,7 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className="flex justify-center align-middle py-8 bg-gradient-to-b from-cyan-900 to-cyan-600">
+        <section className="flex justify-center align-middle py-8 bg-gradient-to-tr from-cyan-900 to-cyan-600">
           <ContactMe />
         </section>
       </main>
