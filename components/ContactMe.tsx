@@ -19,6 +19,7 @@ export const ContactMe = () => {
         (result) => {
           console.log(result.text);
           e.target.reset();
+          //react hot toast function for successful form notification
           toast.success('Message sent successfully! Thanks!', {
             duration: 4000,
             position: 'bottom-center',
@@ -27,6 +28,7 @@ export const ContactMe = () => {
         (error) => {
           console.log(error.text);
           e.target.reset();
+          //unsuccessful notification
           toast.error(
             'Something went wrong, try again, or contact me elsewhere please!',
             {
@@ -39,7 +41,8 @@ export const ContactMe = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center align-middle items-center shadow-md bg-white w-2/4 h-2/4 py-4">
+    <div className="flex flex-col justify-center align-middle items-center shadow-md bg-white w-3/4 h-2/4 py-4">
+      {/* react-hot-toast notification component with styling*/}
       <Toaster
         toastOptions={{
           success: {
@@ -59,6 +62,7 @@ export const ContactMe = () => {
           },
         }}
       />
+
       <h3 className="text-lg py-3 text-center text-cyan-700">Contact Me:</h3>
       <form className="flex flex-col w-2/4" ref={form} onSubmit={sendEmail}>
         <label className="text-lg py-2 text-center text-cyan-700">Name:</label>

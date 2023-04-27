@@ -66,7 +66,7 @@ export default function Home() {
             <SiLinkedin className="cursor-pointer" />
           </div>
         </section>
-        <section className="flex justify-center gap-16 p-8 bg-gradient-to-b from-cyan-900 to-cyan-600">
+        <section className="flex-col flex lg:flex-row justify-center gap-16 p-8 bg-gradient-to-b from-cyan-900 to-cyan-600">
           <div className="flex flex-col items-center shadow-md p-10 bg-white rounded-md">
             <h3 className="text-xl py-3 text-center text-cyan-700">
               Languages/Frameworks used:
@@ -104,7 +104,7 @@ export default function Home() {
           <h3 className="flex justify-center text-cyan-700 text-2xl py-4">
             Projects:
           </h3>
-          <div className="grid grid-cols-3">
+          <div className="grid gap-2 mx-1 my-1 px-1 py-1 lg:grid-cols-3 ">
             <Project
               title="Brewview"
               description="A React app to conduct online beer tastings with my friends. The primary goal is to have a consensus based way to decide on a beer to taste together, establish vocabulary for rating/tasting, and then to aggregate those ratings. The app is styled with Tailwind and the backend and auth is handled through Firebase. This is still a work in progress."

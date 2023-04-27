@@ -29,13 +29,13 @@ export default function Project({
       <p className="flex justify-center align-middle text-center py-4">
         {description}
       </p>
-      <div className="flex gap-2">
+      <div className="flex flex-col lg:flex-row gap-2">
         <button className="cursor-pointer hover:shadow-md hover:opacity-90  bg-gradient-to-r from-cyan-900 to-cyan-600 text-white px-4 py-2 rounded-md ">
           <a className="flex gap-1 items-center" href={githubLink}>
             <SiGithub /> View on github <HiCode />
           </a>
         </button>
-        <button className="cursor-pointer hover:shadow-md hover:opacity-90  bg-gradient-to-r from-cyan-900 to-cyan-600 text-white px-4 py-2 rounded-md ">
+        <button className="cursor-pointer hover:shadow-md hover:opacity-90 px-2 py-1  bg-gradient-to-r from-cyan-900 to-cyan-600 text-white lg:px-4 lg:py-2 rounded-md ">
           <a className="flex gap-1 items-center" href={demoLink}>
             <HiSparkles /> View live <HiSparkles />
           </a>
