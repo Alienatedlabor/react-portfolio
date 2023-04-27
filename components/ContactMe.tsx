@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { Toaster, toast } from 'react-hot-toast';
 
 export const ContactMe = () => {
   const form = useRef();
@@ -18,21 +19,20 @@ export const ContactMe = () => {
         (result) => {
           console.log(result.text);
           e.target.reset();
-          return (
-            <div className="p-4 bg-green-500 text-white absolute ">
-              <p>Email sent successfully! Thanks!</p>
-            </div>
-          );
+          toast.success('Message sent successfully! Thanks!', {
+            duration: 4000,
+            position: 'bottom-center',
+          });
         },
         (error) => {
           console.log(error.text);
           e.target.reset();
-          return (
-            <div className="p-4 bg-red-400 text-white">
-              <p>
-                Something went wrong, try again, or contact me elsewhere please!
-              </p>
-            </div>
+          toast.error(
+            'Something went wrong, try again, or contact me elsewhere please!',
+            {
+              duration: 4000,
+              position: 'bottom-center',
+            }
           );
         }
       );
@@ -40,6 +40,25 @@ export const ContactMe = () => {
 
   return (
     <div className="flex flex-col justify-center align-middle items-center shadow-md bg-white w-2/4 h-2/4 py-4">
+      <Toaster
+        toastOptions={{
+          success: {
+            style: {
+              background: 'green',
+            },
+          },
+          error: {
+            style: {
+              background: 'red',
+            },
+          },
+          style: {
+            border: '1px solid #713200',
+            padding: '16px',
+            color: 'white',
+          },
+        }}
+      />
       <h3 className="text-lg py-3 text-center text-cyan-700">Contact Me:</h3>
       <form className="flex flex-col w-2/4" ref={form} onSubmit={sendEmail}>
         <label className="text-lg py-2 text-center text-cyan-700">Name:</label>
