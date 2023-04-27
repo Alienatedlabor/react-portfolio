@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center shadow-lg p-10 bg-white rounded-md">
             <h3 className="text-xl py-3 items-center text-center text-cyan-700">
-              Technology I've used:
+              Technology used:
             </h3>
             <div>
               <ul className="grid grid-cols-2 gap-x-6 gap-2  text-gray-800">
