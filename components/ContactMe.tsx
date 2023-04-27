@@ -5,7 +5,8 @@ import { Toaster, toast } from 'react-hot-toast';
 export const ContactMe = () => {
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: SubmitEvent) => {
+    console.log(e);
     e.preventDefault();
 
     emailjs

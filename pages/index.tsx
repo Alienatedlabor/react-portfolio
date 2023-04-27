@@ -46,11 +46,11 @@ export default function Home() {
             </h2>
             <h3 className="text-2xl py-4">Frontend Web Developer</h3>
             <p className="text-md leading-8 text-gray-800 py-4">
-              I'm passionate about creating dynamic and engaging user
-              experiences that are functional and intuitive, and I'm constantly
-              striving to learn and grow. When I'm not coding you'll find me
-              improving my German, playing guitar, or getting better at my
-              current favorite game.
+              I&apos;m passionate about creating dynamic and engaging user
+              experiences that are functional and intuitive, and I&apos;m
+              constantly striving to learn and grow. When I&apos;m not coding
+              you&apos;ll find me improving my German, playing guitar, or
+              getting better at my current favorite game.
             </p>
           </div>
 
