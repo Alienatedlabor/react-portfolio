@@ -15,7 +15,7 @@ export default function Project({
 }: {
   title: string;
   description: string;
-  imageURL: StaticImageData;
+  imageURL?: StaticImageData | string;
   alt: string;
   githubLink: string;
   demoLink: string;
