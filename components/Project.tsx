@@ -1,7 +1,7 @@
 import React from 'react';
 import { SiGithub } from 'react-icons/si';
 import { HiCode, HiSparkles } from 'react-icons/hi';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 export default function Project({
   title,
