@@ -10,12 +10,12 @@ export default function Project({
   alt,
   githubLink,
   demoLink,
-  width,
-  height,
+  width = 400,
+  height = 400,
 }: {
   title: string;
   description: string;
-  imageURL?: StaticImageData | string;
+  imageURL?: string;
   alt: string;
   githubLink: string;
   demoLink: string;
@@ -23,12 +23,23 @@ export default function Project({
   height?: number;
 }) {
   return (
-    <div className="flex flex-col items-center shadow-md p-10 rounded-md">
-      <h1 className="text-lg py-3 text-center text-cyan-700">{title}</h1>
-      <Image src={imageURL} alt={alt} height={height} width={width} />
-      <p className="flex justify-center align-middle text-center py-4">
-        {description}
-      </p>
+    <div className="flex flex-col items-center justify-between gap-4 shadow-md p-10 rounded-md">
+      <div>
+        <h1 className="text-lg py-3 text-center text-cyan-700">{title}</h1>
+      </div>
+
+      <div className="flex items-center justify-center align-middle h-52">
+        {!!imageURL && (
+          <Image src={imageURL} alt={alt} height={height} width={width} />
+        )}
+      </div>
+      <div>
+        {' '}
+        <p className="flex justify-center align-middle text-center py-4">
+          {description}
+        </p>
+      </div>
+
       <div className="flex flex-col lg:flex-row gap-2">
         <button className="cursor-pointer hover:shadow-md hover:opacity-90  bg-gradient-to-r from-cyan-900 to-cyan-600 text-white px-4 py-2 rounded-md ">
           <a className="flex gap-1 items-center" href={githubLink}>

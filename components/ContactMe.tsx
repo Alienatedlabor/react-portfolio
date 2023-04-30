@@ -1,11 +1,12 @@
-import React, { useRef } from 'react';
+import React, { FormEventHandler, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'react-hot-toast';
 
 export const ContactMe = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement | null>(null);
 
-  const sendEmail = (e: SubmitEvent) => {
+  const sendEmail: FormEventHandler<HTMLFormElement> = (e) => {
+    const target = e.target as HTMLFormElement;
     console.log(e);
     e.preventDefault();
 
@@ -13,13 +14,13 @@ export const ContactMe = () => {
       .sendForm(
         'service_qn7w2vb',
         'contact_form',
-        form.current,
+        form.current || '',
         '9OZhUrWFpJmldgmJ6'
       )
       .then(
         (result) => {
           console.log(result.text);
-          e.target.reset();
+          target?.reset();
           //react hot toast function for successful form notification
           toast.success('Message sent successfully! Thanks!', {
             duration: 4000,
@@ -28,7 +29,7 @@ export const ContactMe = () => {
         },
         (error) => {
           console.log(error.text);
-          e.target.reset();
+          target?.reset();
           //unsuccessful notification
           toast.error(
             'Something went wrong, try again, or contact me elsewhere please!',
