@@ -6,41 +6,52 @@ import Image from 'next/image';
 import avatar from '../public/ReadyPlayerMe-Avatar.png';
 import Project from '@/components/Project';
 import { ContactMe } from '@/components/ContactMe';
+import { useState } from 'react';
 
 //function for google font, allows preload of font
 const figtree = Figtree({ subsets: ['latin'] });
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
+  const darkClass = darkMode ? 'dark' : '';
+  const font = figtree.className;
+
   return (
-    <div className={figtree.className}>
+    <div className={`${darkClass} ${font}`}>
       <Head>
         <title>Cole Heideman | Web Developer</title>
       </Head>
 
-      <main className="bg-white">
+      <main>
         <section className="min-h-screen">
-          <nav className="p-5 mb-10 flex justify-between">
-            <h1 className="text-xl"></h1>
+          <nav className="p-5 mb-10 flex gap-2 justify-between">
             <ul className="flex items-center gap-2">
               <li>
-                <BsFillMoonStarsFill />
-              </li>
-              <li>
                 <a
-                  className=" hover:shadow-md hover:opacity-90  bg-gradient-to-r from-cyan-900 to-cyan-600 text-white px-4 py-2 rounded-md "
+                  className=" hover:shadow-md hover:opacity-90   bg-gradient-to-r from-cyan-900 to-cyan-600 text-white px-4 py-2 rounded-md "
                   href=""
                 >
                   Resume
                 </a>
               </li>
+              <li>
+                <button
+                  className="text-center gap-1 flex px-3 py-1.5 rounded-md align-middle "
+                  onClick={() => setDarkMode(!darkMode)}
+                >
+                  {' '}
+                  <p>{darkMode === false ? 'Dark mode: ' : 'Light mode: '}</p>
+                  <BsFillMoonStarsFill className="cursor-pointer text-xl" />
+                </button>
+              </li>
             </ul>
           </nav>
           <div className="flex flex-col text-center p-10">
-            <h2 className=" text-5xl font-medium py-4 text-cyan-900">
+            <h2 className=" text-5xl font-medium py-4 text-cyan-900 dark:text-cyan-600">
               Cole Heideman
             </h2>
             <h3 className="text-2xl py-4">Frontend Web Developer</h3>
-            <p className="text-md leading-8 text-gray-800 py-4">
+            <p className="text-md leading-normal text-gray-800 dark:text-cyan-600 py-4 max-w-xl mx-auto">
               I&apos;m passionate about creating dynamic and engaging user
               experiences that are functional and intuitive, and I&apos;m
               constantly striving to learn and grow. When I&apos;m not coding
@@ -56,14 +67,14 @@ export default function Home() {
               fill
             />
           </div>
-          <div className="flex justify-center text-5xl gap-12 py-4 text-cyan-900">
+          <div className="flex justify-center text-5xl gap-12 py-4 dark:text-cyan-600 text-cyan-900">
             <SiGithub className="cursor-pointer" />
             <SiLinkedin className="cursor-pointer" />
           </div>
         </section>
         <section className="flex-col flex lg:flex-row justify-center gap-16 p-8 bg-gradient-to-b from-cyan-900 to-cyan-600">
-          <div className="flex flex-col items-center shadow-md p-10 bg-white rounded-md">
-            <h3 className="text-xl py-3 text-center text-cyan-700">
+          <div className="flex flex-col items-center shadow-md p-10 bg-white dark:bg-gray-200 rounded-md">
+            <h3 className="text-xl py-3 text-center dark:text-cyan-800 text-cyan-700">
               Languages/Frameworks used:
             </h3>
             <ul className="grid grid-cols-2 gap-x-6 gap-2  text-gray-800">
@@ -77,8 +88,8 @@ export default function Home() {
               <li>Bootstrap</li>
             </ul>
           </div>
-          <div className="flex flex-col items-center shadow-lg p-10 bg-white rounded-md">
-            <h3 className="text-xl py-3 items-center text-center text-cyan-700">
+          <div className="flex flex-col items-center shadow-lg p-10 bg-white  dark:bg-gray-200 rounded-md">
+            <h3 className="text-xl py-3 items-center text-center  dark:text-cyan-800 text-cyan-700">
               Technology used:
             </h3>
             <div>
@@ -96,7 +107,7 @@ export default function Home() {
           <div></div>
         </section>
         <section>
-          <h3 className="flex justify-center text-cyan-700 text-2xl py-4">
+          <h3 className="flex justify-center text-cyan-700 dark:text-cyan-600 text-2xl py-4">
             Projects:
           </h3>
           <div className="grid gap-2 mx-1 my-1 px-1 py-1 lg:grid-cols-3 ">

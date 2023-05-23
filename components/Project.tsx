@@ -25,7 +25,9 @@ export default function Project({
   return (
     <div className="flex flex-col items-center justify-between gap-4 shadow-md p-10 rounded-md">
       <div>
-        <h1 className="text-lg py-3 text-center text-cyan-700">{title}</h1>
+        <h1 className="text-lg py-3 text-center dark:text-cyan-600 text-cyan-700">
+          {title}
+        </h1>
       </div>
 
       <div className="flex items-center justify-center align-middle h-52">

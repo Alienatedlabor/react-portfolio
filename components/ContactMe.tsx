@@ -43,7 +43,7 @@ export const ContactMe = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center align-middle items-center shadow-md bg-white w-3/4 h-2/4 py-4">
+    <div className="flex flex-col justify-center align-middle items-center shadow-md bg-white  dark:bg-gray-200 w-3/4 h-2/4 py-4">
       {/* react-hot-toast notification component with styling*/}
       <Toaster
         toastOptions={{
@@ -65,28 +65,34 @@ export const ContactMe = () => {
         }}
       />
 
-      <h3 className="text-lg py-3 text-center text-cyan-700">Contact Me:</h3>
+      <h3 className="text-lg py-3 text-center  dark:text-cyan-800 text-cyan-700">
+        Contact Me:
+      </h3>
       <form className="flex flex-col w-2/4" ref={form} onSubmit={sendEmail}>
-        <label className="text-lg py-2 text-center text-cyan-700">Name:</label>
+        <label className="text-lg py-2 text-center  dark:text-cyan-800 text-cyan-700">
+          Name:
+        </label>
         <input
           required
-          className="border-cyan-700 border"
+          className="border-cyan-700 border  dark:text-cyan-800 dark:bg-gray-200"
           type="text"
           name="user_name"
         />
-        <label className="text-lg py-2 text-center text-cyan-700">Email:</label>
+        <label className="text-lg py-2 text-center  dark:text-cyan-800 text-cyan-700">
+          Email:
+        </label>
         <input
           required
-          className="border-cyan-700 border"
+          className="border-cyan-700 border   dark:text-cyan-800 dark:bg-gray-200"
           type="email"
           name="user_email"
         />
-        <label className="text-lg py-2 text-center text-cyan-700">
+        <label className="text-lg py-2 text-center  dark:text-cyan-800 text-cyan-700">
           Message:
         </label>
         <textarea
           required
-          className="border-cyan-700 border py-3 my-3"
+          className="border-cyan-700 border py-3 my-3  dark:text-cyan-800  dark:bg-gray-200"
           name="message"
         />
         <button

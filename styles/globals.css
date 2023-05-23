@@ -2,5 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-} */
+.dark {
+  @apply bg-gray-900 text-white;
+}
