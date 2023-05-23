@@ -31,7 +31,7 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer noopener"
                   className=" hover:shadow-md hover:opacity-90   bg-gradient-to-r from-cyan-900 to-cyan-600 text-white px-4 py-2 rounded-md "
-                  href=""
+                  href="/Resume5-23-2023.pdf"
                 >
                   Resume
                 </a>
