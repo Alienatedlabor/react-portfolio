@@ -121,7 +121,22 @@ export default function Home() {
               // imageURL=""
               alt=""
             />
-
+            <Project
+              title="Overwatch Main Report"
+              description="A react typescript app that utilizes the overfast API to look a player up and report what character they main in the game Overwatch. Styled with Tailwind."
+              demoLink="https://overwatch-main-report.vercel.app/"
+              githubLink="https://github.com/Alienatedlabor/overwatch-main-report"
+              imageURL="/overwatch.png"
+              alt="a simple UI with an input and search button, a list of results, and a card giving stats on the selected result"
+            />
+            <Project
+              title="This portfolio!"
+              description="a Next.js app utilizing typescript, styled with Tailwind"
+              demoLink="https://react-portfolio-cole-heideman.vercel.app/"
+              githubLink="https://github.com/Alienatedlabor/react-portfolio"
+              imageURL=""
+              alt=""
+            />
             <Project
               alt="weather app UI showing example weather, a search bar, and a five day forecast"
               title="Weather App"
