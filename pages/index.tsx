@@ -118,8 +118,8 @@ export default function Home() {
               description="A React app to conduct online beer tastings with my friends. The primary goal is to have a consensus based way to decide on a beer to taste together, establish vocabulary for rating/tasting, and then to aggregate those ratings. The app is styled with Tailwind and the backend and auth is handled through Firebase. This is still a work in progress."
               demoLink="https://beerview.vercel.app/"
               githubLink="https://github.com/Alienatedlabor/beerview"
-              // imageURL=""
-              alt=""
+              imageURL="/brewview.png"
+              alt="an image depicting a greyer background half which contains a few listed beers to be rated, and a bright modal open on the right with a form for rating."
             />
             <Project
               title="Overwatch Main Report"
@@ -134,8 +134,8 @@ export default function Home() {
               description="a Next.js app utilizing typescript, styled with Tailwind"
               demoLink="https://react-portfolio-cole-heideman.vercel.app/"
               githubLink="https://github.com/Alienatedlabor/react-portfolio"
-              imageURL=""
-              alt=""
+              imageURL="/portfolio.png"
+              alt="this portfolio's hero section in dark mode"
             />
             <Project
               alt="weather app UI showing example weather, a search bar, and a five day forecast"
