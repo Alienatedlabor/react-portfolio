@@ -115,7 +115,7 @@ export default function Home() {
           <div className="grid gap-2 mx-1 my-1 px-1 py-1 lg:grid-cols-3 ">
             <Project
               title="Brewview"
-              description="A React app to conduct online beer tastings with my friends. The primary goal is to have a consensus based way to decide on a beer to taste together, establish vocabulary for rating/tasting, and then to aggregate those ratings. The app is styled with Tailwind and the backend and auth is handled through Firebase. This is still a work in progress."
+              description="A React app to conduct online beer tastings with my friends. The primary goal is to have a consensus based way to decide on a beer to taste together, establish vocabulary for rating/tasting, and then to aggregate those ratings. The app is styled with Tailwind and the backend and auth is handled through Firebase. This is still a work in progress but currently has full CRUD functionality."
               demoLink="https://beerview.vercel.app/"
               githubLink="https://github.com/Alienatedlabor/beerview"
               imageURL="/brewview.png"
