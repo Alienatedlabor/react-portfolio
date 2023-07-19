@@ -180,7 +180,7 @@ export default function Home() {
               This portfolio is a next.js app utilizing typescript styled with
               tailwind. Check it out on github
               <a
-                className="hover:underline px-1"
+                className="underline hover:text-cyan-700 px-1"
                 href="https://github.com/Alienatedlabor/react-portfolio"
               >
                 here.
