@@ -156,19 +156,10 @@ export default function Home() {
             />
 
             <Project
-              title="Tic-Tac-Toe"
-              imageURL="/ticTacToeScreenshot.png"
-              alt="an image of a tic tac toe grid where O won."
-              description="A Tic-tac-toe webapp game for two same-screen players, written in vanilla javascript."
-              githubLink="https://github.com/Alienatedlabor/Tic-Tac-Toe"
-              demoLink="https://alienatedlabor.github.io/Tic-Tac-Toe/"
-            />
-
-            <Project
               title="Admin Dashboard"
               imageURL="/adminDashboardScreenshot.png"
               alt="an admin dashboard layout"
-              description="A mock admin dashboard I made to practice layouts combining CSS Grid and Flex. The design layout was built according to a design sheet, and I added a dynamic greeting that changes depending on what time it is."
+              description="A mock admin dashboard I made to practice layouts combining CSS Grid and Flex. The design layout was built according to a design sheet provided by the odin project, and I added a dynamic greeting that changes depending on what time it is."
               githubLink="https://github.com/Alienatedlabor/Admin-Dashboard"
               demoLink="https://alienatedlabor.github.io/Admin-Dashboard/"
             />
@@ -177,7 +168,7 @@ export default function Home() {
               title="Signup Form"
               imageURL="/signupFormScreenshot.png"
               alt="a signup form for a fake cryogenics company called Ewig"
-              description="A mock signup form meant to practice HTML form validation and some javascript form validation, as well as CSS positioning. Uses some SASS features for styling."
+              description="A mock signup form meant to practice HTML form validation and some javascript form validation, as well as CSS positioning. Uses some SASS features for styling, built according to odin project design sheet."
               githubLink="https://github.com/Alienatedlabor/Signup-Form"
               demoLink="https://alienatedlabor.github.io/Signup-Form/"
             />
