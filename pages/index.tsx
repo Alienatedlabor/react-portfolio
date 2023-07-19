@@ -111,7 +111,7 @@ export default function Home() {
         </section>
         <section className="flex-col flex lg:flex-row justify-center  p-8 bg-cyan-700">
           <div className="flex flex-col items-center  lg:p-8 ">
-            <h3 className="text-xl py-3 text-center  text-white">
+            <h3 className="text-xl py-3 text-center font-bold  text-white">
               Languages & Frameworks:
             </h3>
             <ul className=" border border-white p-5  rounded-md grid grid-cols-2 gap-x-12 gap-1 w-64 h-36  text-white">
@@ -126,7 +126,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="flex flex-col items-center  lg:p-8">
-            <h3 className="text-xl py-3 items-center text-center  text-white">
+            <h3 className="text-xl py-3 items-center text-center font-bold  text-white">
               Tech:
             </h3>
             <div>
