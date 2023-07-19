@@ -43,7 +43,7 @@ export const ContactMe = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center align-middle items-center shadow-md bg-white  dark:bg-gray-200 w-3/4 h-2/4 py-4">
+    <div className="flex flex-col justify-center align-middle items-center w-3/4 h-3/4 py-4">
       {/* react-hot-toast notification component with styling*/}
       <Toaster
         toastOptions={{
@@ -65,42 +65,50 @@ export const ContactMe = () => {
         }}
       />
 
-      <h3 className="text-lg py-3 text-center  dark:text-cyan-800 text-cyan-700">
-        Contact Me:
+      <h3 className="text-5xl font-bold mt-12 py-3 text-center text-white">
+        Let&apos;s Talk
       </h3>
-      <form className="flex flex-col w-2/4" ref={form} onSubmit={sendEmail}>
-        <label className="text-lg py-2 text-center  dark:text-cyan-800 text-cyan-700">
-          Name:
-        </label>
-        <input
-          required
-          className="border-cyan-700 border  dark:text-cyan-800 dark:bg-gray-200"
-          type="text"
-          name="user_name"
-        />
-        <label className="text-lg py-2 text-center  dark:text-cyan-800 text-cyan-700">
-          Email:
-        </label>
-        <input
-          required
-          className="border-cyan-700 border   dark:text-cyan-800 dark:bg-gray-200"
-          type="email"
-          name="user_email"
-        />
-        <label className="text-lg py-2 text-center  dark:text-cyan-800 text-cyan-700">
-          Message:
-        </label>
-        <textarea
-          required
-          className="border-cyan-700 border py-3 my-3  dark:text-cyan-800  dark:bg-gray-200"
-          name="message"
-        />
-        <button
-          formAction="submit"
-          className="cursor-pointer hover:shadow-md hover:opacity-90  bg-gradient-to-r from-cyan-900 to-cyan-600 text-white px-4 py-2 rounded-md"
-        >
-          Submit
-        </button>
+      <form
+        className="flex flex-col justify-center w-2/4"
+        ref={form}
+        onSubmit={sendEmail}
+      >
+        <div className="lg:grid lg:grid-cols-2 gap-4 flex flex-col">
+          <div className="flex flex-col">
+            <label className="text-lg font-bold py-2  text-white">Name</label>
+            <input
+              required
+              className="border-white border rounded-md py-2   text-white"
+              type="text"
+              name="user_name"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label className="text-lg py-2 font-bold text-white">Email</label>
+            <input
+              required
+              className="border-white border rounded-md py-2   text-white"
+              type="email"
+              name="user_email"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <label className="text-lg py-2 font-bold text-white">Message</label>
+          <textarea
+            required
+            className="border-white border  py-5 my-3 rounded-md bg-[rgba(255, 255, 255, 0.12)] text-white"
+            name="message"
+          />
+        </div>
+        <div className="flex justify-center">
+          <button
+            formAction="submit"
+            className="cursor-pointer hover:opacity-80 border border-white font-bold text-lg align-middle  text-white w-24 px-4 py-2 rounded-md"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

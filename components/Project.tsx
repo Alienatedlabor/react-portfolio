@@ -23,46 +23,45 @@ export default function Project({
   height?: number;
 }) {
   return (
-    <div className="flex flex-col items-center justify-between gap-4 shadow-md p-10 rounded-md">
-      <div>
-        <h1 className="text-lg py-3 text-center dark:text-cyan-600 text-cyan-700">
-          {title}
-        </h1>
-      </div>
-
+    <div className="flex flex-col items-center justify-between gap-4 p-10 rounded-md">
       <div className="flex items-center justify-center align-middle h-52">
         {!!imageURL && (
           <Image src={imageURL} alt={alt} height={height} width={width} />
         )}
       </div>
       <div>
-        {' '}
-        <p className="flex justify-center align-middle text-center py-4">
-          {description}
-        </p>
-      </div>
+        <div>
+          <h1 className="text-3xl font-bold py-2 dark:text-white text-cyan-700">
+            {title}
+          </h1>
+        </div>
+        <div>
+          {' '}
+          <p className="flex py-2">{description}</p>
+        </div>
 
-      <div className="flex flex-col lg:flex-row gap-2">
-        <button className="cursor-pointer hover:shadow-md hover:opacity-90  bg-gradient-to-r from-cyan-900 to-cyan-600 text-white px-4 py-2 rounded-md ">
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
-            className="flex gap-1 items-center"
-            href={githubLink}
-          >
-            <SiGithub /> View on github <HiCode />
-          </a>
-        </button>
-        <button className="cursor-pointer hover:shadow-md hover:opacity-90 px-2 py-1  bg-gradient-to-r from-cyan-900 to-cyan-600 text-white lg:px-4 lg:py-2 rounded-md ">
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
-            className="flex gap-1 items-center"
-            href={demoLink}
-          >
-            <HiSparkles /> View live <HiSparkles />
-          </a>
-        </button>
+        <div className="flex flex-col lg:flex-row gap-2">
+          <button className="cursor-pointer hover:opacity-80 text-cyan-900 border border-cyan-900  px-4 py-2 rounded-md dark:border-white dark:text-white  ">
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex gap-1 items-center"
+              href={githubLink}
+            >
+              View on github
+            </a>
+          </button>
+          <button className="cursor-pointer hover:opacity-80 text-cyan-900 border border-cyan-900  px-4 py-2 rounded-md dark:border-white  dark:text-white  ">
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex gap-1 items-center"
+              href={demoLink}
+            >
+              View live
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   );
