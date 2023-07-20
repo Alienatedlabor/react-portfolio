@@ -1,14 +1,16 @@
-import React, { FormEventHandler, useRef } from 'react';
+import React, { FormEventHandler, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'react-hot-toast';
 
 export const ContactMe = () => {
   const form = useRef<HTMLFormElement | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail: FormEventHandler<HTMLFormElement> = (e) => {
     const target = e.target as HTMLFormElement;
-    console.log(e);
+
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs
       .sendForm(
@@ -21,6 +23,7 @@ export const ContactMe = () => {
         (result) => {
           console.log(result.text);
           target?.reset();
+          setIsLoading(false);
           //react hot toast function for successful form notification
           toast.success('Message sent successfully! Thanks!', {
             duration: 4000,
@@ -30,6 +33,7 @@ export const ContactMe = () => {
         (error) => {
           console.log(error.text);
           target?.reset();
+          setIsLoading(false);
           //unsuccessful notification
           toast.error(
             'Something went wrong, try again, or contact me elsewhere please!',
@@ -106,10 +110,11 @@ export const ContactMe = () => {
         </div>
         <div className="flex justify-center">
           <button
+            disabled={isLoading}
             formAction="submit"
-            className="cursor-pointer hover:opacity-80 border border-white font-bold text-lg align-middle  text-white w-24 px-4 py-2 rounded-md"
+            className="cursor-pointer hover:opacity-80 border border-white font-bold text-lg align-middle  text-white px-4 py-2 rounded-md"
           >
-            Submit
+            {isLoading ? 'Submitting...' : 'Submit'}
           </button>
         </div>
       </form>
