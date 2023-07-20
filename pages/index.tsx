@@ -102,9 +102,9 @@ export default function Home() {
               <path
                 d="M9.5 14.25L19 23.75L28.5 14.25"
                 stroke="rgb(8 51 68)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
