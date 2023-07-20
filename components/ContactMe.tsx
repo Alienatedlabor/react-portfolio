@@ -78,7 +78,7 @@ export const ContactMe = () => {
             <label className="text-lg font-bold py-2  text-white">Name</label>
             <input
               required
-              className="border-white border rounded-md py-2"
+              className="border-white border rounded-md px-2 py-2"
               type="text"
               name="user_name"
               placeholder="Enter your name"
@@ -89,7 +89,7 @@ export const ContactMe = () => {
             <input
               placeholder="Enter your email"
               required
-              className="border-white border rounded-md py-2 "
+              className="border-white border rounded-md px-2 py-2 "
               type="email"
               name="user_email"
             />
@@ -100,7 +100,7 @@ export const ContactMe = () => {
           <textarea
             placeholder="Enter your message"
             required
-            className="border-white border  py-5 my-3 rounded-md bg-[rgba(255, 255, 255, 0.12)]"
+            className="border-white border px-2  py-5 my-3 rounded-md bg-[rgba(255, 255, 255, 0.12)]"
             name="message"
           />
         </div>

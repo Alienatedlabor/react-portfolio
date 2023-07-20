@@ -175,14 +175,15 @@ export default function Home() {
               demoLink="https://alienatedlabor.github.io/Etch-a-Sketch/"
             />
           </div>
-          <div className="flex justify-center">
-            <p className="flex justify-center py-4">
+          <div className="text-center">
+            <p className="">
               This portfolio is a next.js app utilizing typescript styled with
-              tailwind. Check it out on github
+              tailwind. Check it out on github{' '}
               <a
-                className="underline hover:text-cyan-700 px-1"
+                className="underline hover:text-cyan-700"
                 href="https://github.com/Alienatedlabor/react-portfolio"
               >
+                {' '}
                 here.
               </a>
             </p>
