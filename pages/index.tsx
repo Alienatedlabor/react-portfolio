@@ -24,7 +24,7 @@ export default function Home() {
 
       <main>
         <section className="min-h-screen">
-          <nav className="p-5 mb-10 flex gap-2 justify-end lg:mx-4 ">
+          <nav className="p-5 mb-10 flex gap-2  items-center justify-end lg:mx-4 ">
             <ul className="  text-cyan-900 flex items-center text-center font-bold text-lg gap-2  dark:text-white">
               <li>
                 <a
@@ -38,16 +38,18 @@ export default function Home() {
               </li>
               <li>
                 <button
-                  className="text-center gap-1 flex px-3 py-1.5 hover:opacity-80 rounded-md align-middle "
+                  className="text-center gap-1 flex px-3 hover:opacity-80 rounded-md items-center "
                   onClick={() => setDarkMode(!darkMode)}
                 >
                   {' '}
-                  <BsFillMoonStarsFill className="cursor-pointer text-xl" />
-                  <p>{darkMode === false ? 'Dark mode' : 'Light mode'}</p>
+                  <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
+                  <p className="hidden lg:block">
+                    {darkMode === false ? 'Dark mode' : 'Light mode'}
+                  </p>
                 </button>
               </li>
               <li>
-                <button className="hover:opacity-80">
+                <button className="hover:opacity-80 flex">
                   <a
                     target="_blank"
                     rel="noreferrer noopener"
@@ -59,7 +61,7 @@ export default function Home() {
                 </button>
               </li>
               <li>
-                <button className="hover:opacity-90">
+                <button className="hover:opacity-90 flex px-3">
                   <a
                     target="_blank"
                     rel="noreferrer noopener"
@@ -72,17 +74,23 @@ export default function Home() {
             </ul>
           </nav>
           <div className="flex flex-col text-center p-10">
-            <h2 className=" text-7xl font-medium text-cyan-900 dark:text-white">
+            <h2 className=" lg:text-7xl text-5xl font-medium text-cyan-900 dark:text-white">
               Cole Heideman
             </h2>
-            <h3 className="text-3xl py-4 font-bold">Frontend Web Developer</h3>
+            <h3 className="lg:text-3xl text-1xl py-4 font-bold">
+              Frontend Web Developer
+            </h3>
           </div>
 
-          <div className="bg-gradient-to-b from-cyan-900 to-cyan-600 rounded-full relative mx-auto w-80 h-80 overflow-hidden">
+          <div className="bg-gradient-to-b from-cyan-900 to-cyan-600 rounded-full relative mx-auto max-w-[320px] max-h-[320px] overflow-hidden">
             <Image
+              width={0}
+              height={0}
+              sizes="100vw"
+              priority
               src={avatar}
               alt="3d digital representation of smiling bald bearded man with glasses (me) "
-              fill
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
           <p className="text-md text-center text-gray-800 dark:text-white py-10 max-w-xl mx-auto">
@@ -176,7 +184,7 @@ export default function Home() {
             />
           </div>
           <div className="text-center">
-            <p className="">
+            <p className="mb-6">
               This portfolio is a next.js app utilizing typescript styled with
               tailwind. Check it out on github{' '}
               <a

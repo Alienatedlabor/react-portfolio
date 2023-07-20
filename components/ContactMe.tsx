@@ -47,7 +47,7 @@ export const ContactMe = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center align-middle items-center w-3/4 h-3/4 py-4">
+    <div className="flex flex-col justify-center align-middle items-center  py-4">
       {/* react-hot-toast notification component with styling*/}
       <Toaster
         toastOptions={{
@@ -73,7 +73,7 @@ export const ContactMe = () => {
         Let&apos;s Talk
       </h3>
       <form
-        className="flex flex-col justify-center w-2/4"
+        className="flex flex-col justify-center "
         ref={form}
         onSubmit={sendEmail}
       >
@@ -82,7 +82,7 @@ export const ContactMe = () => {
             <label className="text-lg font-bold py-2  text-white">Name</label>
             <input
               required
-              className="border-white border rounded-md px-2 py-2"
+              className="border-white flex border rounded-md px-2 py-2"
               type="text"
               name="user_name"
               placeholder="Enter your name"
@@ -93,7 +93,7 @@ export const ContactMe = () => {
             <input
               placeholder="Enter your email"
               required
-              className="border-white border rounded-md px-2 py-2 "
+              className=" flex border-white border rounded-md px-2 py-2 "
               type="email"
               name="user_email"
             />
@@ -104,7 +104,7 @@ export const ContactMe = () => {
           <textarea
             placeholder="Enter your message"
             required
-            className="border-white border px-2  py-5 my-3 rounded-md bg-[rgba(255, 255, 255, 0.12)]"
+            className="border-white border px-2  flex py-5 my-3 rounded-md bg-[rgba(255, 255, 255, 0.12)]"
             name="message"
           />
         </div>
