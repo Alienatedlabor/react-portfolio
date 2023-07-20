@@ -78,16 +78,18 @@ export const ContactMe = () => {
             <label className="text-lg font-bold py-2  text-white">Name</label>
             <input
               required
-              className="border-white border rounded-md py-2   text-white"
+              className="border-white border rounded-md py-2"
               type="text"
               name="user_name"
+              placeholder="Enter your name"
             />
           </div>
           <div className="flex flex-col">
             <label className="text-lg py-2 font-bold text-white">Email</label>
             <input
+              placeholder="Enter your email"
               required
-              className="border-white border rounded-md py-2   text-white"
+              className="border-white border rounded-md py-2 "
               type="email"
               name="user_email"
             />
@@ -96,8 +98,9 @@ export const ContactMe = () => {
         <div className="flex flex-col">
           <label className="text-lg py-2 font-bold text-white">Message</label>
           <textarea
+            placeholder="Enter your message"
             required
-            className="border-white border  py-5 my-3 rounded-md bg-[rgba(255, 255, 255, 0.12)] text-white"
+            className="border-white border  py-5 my-3 rounded-md bg-[rgba(255, 255, 255, 0.12)]"
             name="message"
           />
         </div>
