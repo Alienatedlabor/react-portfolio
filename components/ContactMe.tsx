@@ -104,7 +104,7 @@ export const ContactMe = () => {
           <textarea
             placeholder="Enter your message"
             required
-            className="border-white border px-2 dark:text-black flex py-5 my-3 rounded-md bg-[rgba(255, 255, 255, 0.12)]"
+            className="border-white border px-2 dark:text-black flex py-5 mb-3 rounded-md bg-[rgba(255, 255, 255, 0.12)]"
             name="message"
           />
         </div>
